@@ -1,7 +1,7 @@
 import Header from "../Components/header";
 import keyboard_1 from "../assets/keyboard_1.png";
 import keyboard_2 from "../assets/keyboard_2.png";
-import Monitor_6 from "../assets/Monitor_6.png";
+import Monitor_6 from "../assets/monitor_6.png";
 import { MdLanguage, MdComputer } from 'react-icons/md';
 import { BsKeyboard } from "react-icons/bs";
 
