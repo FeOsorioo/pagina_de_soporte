@@ -6,7 +6,7 @@ import Monitor_6 from "../assets/monitor_6.png"
 
 const Red = () => {
     return (
-        <div className="ml-64 text-[#004466] flex flex-col items-center text-xl">
+        <div className="text-[#004466] flex flex-col items-center text-xl">
             <Header text1="Problemas" text2="Comunes" text3="de Red" color="0096c8" />
 
           <div className="flex gap-10 px-10">
