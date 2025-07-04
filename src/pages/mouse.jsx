@@ -7,7 +7,7 @@ import { MdMouse, MdUsb, MdCheckCircle, MdLink, MdBuild } from 'react-icons/md';
 
 const Mouse = () => {
   return (
-    <div className="ml-64 text-[#004466] flex flex-col items-center pb-20 text-y">
+    <div className="text-[#004466] flex flex-col items-center pb-20 text-y">
       <Header text1="Problemas" text2="Comunes" text3="Mouse" color="878fff" />
 
       <div className="container mx-auto px-20 py-10">

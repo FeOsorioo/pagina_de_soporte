@@ -7,7 +7,7 @@ import { BsKeyboard } from "react-icons/bs";
 
 const Keyboard = () => {
     return (
-        <div className="ml-64 text-[#004466] flex flex-col items-center pb-20 text-lg"> 
+        <div className="text-[#004466] flex flex-col items-center pb-20 text-lg"> 
             <Header text1="Problemas" text2="Comunes" text3="Teclado" color="0367a5" />
 
             <div className="container mx-auto px-4 py-8"> 
