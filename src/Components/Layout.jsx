@@ -5,7 +5,7 @@ export default function Layout() {
   return (
     <div className="flex">
       <Side_menu />
-      <main className="w-full md:ml-64">
+      <main className="w-full lg:ml-64">
         <Outlet />
       </main>
     </div>

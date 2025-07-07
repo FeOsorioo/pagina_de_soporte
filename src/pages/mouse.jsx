@@ -10,8 +10,8 @@ const Mouse = () => {
     <div className="text-[#004466] flex flex-col items-center pb-20 text-y">
       <Header text1="Problemas" text2="Comunes" text3="Mouse" color="878fff" />
 
-      <div className="container mx-auto px-20 py-10">
-        <h1 className="text-4xl font-extrabold text-center mb-8">
+      <div className="container mx-auto px-5 md:px-20 md:py-10">
+        <h1 className="text-2xl md:text-4xl font-extrabold text-center mb-8">
           Revisión general del funcionamiento del ratón si presenta alguna anomalía se va a realizar lo siguiente.
         </h1>
 
@@ -23,13 +23,13 @@ const Mouse = () => {
               <p>Luego se revisa que el cable que este en buenas condiciones.</p>
           </div>
           <div className="flex-1 flex justify-center items-center p-4">
-            <img src={mouse_2} className='w-4/12' />
+            <img src={mouse_2} className='w-8/12 md:w-4/12' />
           </div>
         </div>
 
         {/* Paso 2 */}
         <div className="flex flex-col lg:flex-row-reverse items-center gap-10 mb-16 p-8 bg-gradient-to-br from-purple-50 to-indigo-100 rounded-3xl shadow-base border border-purple-200">
-          <div className="flex-1 flex flex-col gap-6 items-start">
+          <div className="flex-1 flex flex-col gap-6items-start ">
             <h3 className="text-2xl font-bold">2. Prueba de funcionamiento online</h3>
             <p >
               Luego de haber revisado el cable, se ingresará al siguiente link 
@@ -37,9 +37,9 @@ const Mouse = () => {
                 href="https://www.onlinemictest.com/es/prueba-de-mouse/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-blue-600 hover:underline font-semibold inline-block mt-2"
+                className="text-blue-800 hover:underline font-semibold inline-block mt-2"
               >
-                https://www.onlinemictest.com/es/prueba-de-mouse/
+                https://www.onlinemictest.com
               </a>
               para verificar el funcionamiento del mouse.
 
@@ -52,7 +52,7 @@ const Mouse = () => {
             <img
               src={mouse_1}
               alt="Captura de la prueba de mouse online"
-              className="w-full max-w-md rounded-2xl shadow-lg border border-gray-200 object-cover"
+              className="w-full max-w-md rounded-2xl shadow-lg border border-gray-200 "
             />
           </div>
         </div>
@@ -66,7 +66,7 @@ const Mouse = () => {
             <p className="text-lg font-semibold text-red-700 leading-relaxed">Si al revisar todos estos parámetros se verifica que el ratón no funciona, avisar al técnico encargado para una revisión más exhaustiva o si se requiere un cambio de mouse.</p>
           </div>
           <div className="flex-1 flex justify-center items-center p-4">
-            <img src={mouse_3} className='w-7/12 rounded-full' />
+            <img src={mouse_3} className='md:w-5/12 lg:w-7/12 rounded-full' />
           </div>
         </div>
       </div>

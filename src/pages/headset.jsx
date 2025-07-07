@@ -43,19 +43,19 @@ const Headset = () => {
 
 
   return (
-    <div className="flex flex-col items-center text-lg text-[#004466]">
+    <div className="flex flex-col items-center text-base md:text-lg text-[#004466]">
       
       <Header text1="Problemas" text2="Comunes" text3="Headset" color="603fa8" />
 
-      <div className="flex flex-col w-full px-14 gap-5">
+      <div className="flex flex-col w-full lg:px-14 gap-5 md:px-20">
         <div className="flex flex-col items-center justify-center p-6 sm:p-10">
-          <div id="headset_0" className="w-full text-left flex text-5xl sm:text-4xl">
+          <div id="headset_0" className="w-full text-center md:text-left flex text-3xl lg:text-5xl sm:text-4xl">
             <h1 className="font-extrabold mb-10 leading-tight text-[#004466] ">
               No se <span className="text-white bg-[#004466] py-1 p-3 rounded-4xl">escucha</span>  headset
             </h1>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full items-start max-w-6xl h-auto mb-4">
+          <div className="grid md:grid-cols-3 gap-8 w-full items-start max-w-6xl h-auto mb-4">
             {/* Accordion 1: Verifica la conexión física */}
             <Accordion
               expanded={expanded_1}
@@ -69,11 +69,11 @@ const Headset = () => {
               >
                 <div id="headset_1" className="flex items-center gap-3">
                   <div
-                    className={`w-8 h-8 flex items-center justify-center rounded-full text-white transition-all duration-300 ${
+                    className={`w-8 h-auto xs:h-5 flex items-center justify-center rounded-full text-white transition-all duration-300 ${
                       expanded_1 ? 'bg-[#0487d9] rotate-180' : 'bg-[#0487d9]'
                     }`}
                   >
-                    <IoIosArrowUp className="w-5 h-5" />
+                    <IoIosArrowUp className="w-5 h-auto" />
                   </div>
                   <h2 className="text-xl font-semibold text-[#0487d9]">
                     Verifica la conexión física
@@ -102,11 +102,11 @@ const Headset = () => {
               >
                 <div id="headset_3" className="flex items-center gap-3">
                   <div
-                    className={`w-8 h-8 flex items-center justify-center rounded-full text-white transition-all duration-300 ${
+                    className={`w-8 h-auto xs:h-5 flex items-center justify-center rounded-full text-white transition-all duration-300 ${
                       expanded_2 ? 'bg-[#a46fe8] rotate-180' : 'bg-[#a46fe8]'
                     }`}
                   >
-                    <IoIosArrowUp className="w-5 h-5" />
+                    <IoIosArrowUp className="w-5 h-auto" />
                   </div>
                   <h2 className="text-xl font-semibold text-[#a46fe8]">
                     Verifica el micrófono
@@ -135,7 +135,7 @@ const Headset = () => {
               >
                 <div id="headset_5" className="flex items-center gap-3">
                   <div
-                    className={`w-8 h-8 flex items-center justify-center rounded-full text-white transition-all duration-300 ${
+                    className={`w-8 h-auto xs:h-5 flex items-center justify-center rounded-full text-white transition-all duration-300 ${
                       expanded_3 ? 'bg-[#0096c8] rotate-180' : 'bg-[#0096c8]'
                     }`}
                   >
@@ -164,71 +164,71 @@ const Headset = () => {
           </div>
         </div>
         <div className="w-full ">
-          <div className="container mx-auto px-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="container mx-auto lg:px-6 md:px-10">
+            <div className="grid lg:grid-cols-3 gap-8">
               
               {/* Tarjeta 1: Reconocer Headset */}
-              <div className="group relative flex flex-col justify-between bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 ease-in-out overflow-hidden">
+              <div className="group relative flex flex-col items-center justify-between bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 ease-in-out overflow-hidden">
                 {/* Encabezado con número y título */}
                 <div className="p-6 md:p-8 space-y-4">
                   <div className="relative z-10">
                     <h3 id="headset_7" className="text-2xl font-bold text-slate-800">
                       Reconocer Headset
                     </h3>
-                    <p id="headset_8" className="text-slate-600 leading-relaxed mt-2">
+                    <p id="headset_8" className=" leading-relaxed mt-2">
                       Verifica si el sistema reconoce tu headset. Deberías ver un indicador de volumen activo. Si no es así, consulta el siguiente paso.
                     </p>
                   </div>
                 </div>
                 {/* Imagen */}
                 <div className="px-8 pb-8">
-                  <img src={Headset_2} alt="Reconocer headset" className="w-full h-auto rounded-lg shadow-md" />
+                  <img src={Headset_2} alt="Reconocer headset" className="w-96 lg:w-full h-auto rounded-lg shadow-md" />
                 </div>
               </div>
 
               {/* Tarjeta 2: Configuración de Grabación */}
-              <div className="group relative flex flex-col justify-between bg-neutral-100 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 ease-in-out overflow-hidden">
+              <div className="group relative flex flex-col items-center justify-between bg-neutral-100 rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 ease-in-out overflow-hidden">
                 {/* Encabezado con número y título */}
                 <div className="p-6 md:p-8 space-y-4">
                   <div className="relative z-10">
                     <h3 id="headset_9" className="text-2xl font-bold text-slate-800">
                       Configurar Grabación
                     </h3>
-                    <p id="headset_10" className="text-slate-600 leading-relaxed mt-2">
+                    <p id="headset_10" className=" leading-relaxed mt-2">
                       Ve a la pestaña de grabación para acceder a las propiedades del micrófono y asegurar que todo funcione correctamente.
                     </p>
                   </div>
                 </div>
                 {/* Imagen */}
                 <div className="px-8 pb-8">
-                  <img src={Headset_3} alt="Configuración de grabación" className="w-full h-auto rounded-lg shadow-md" />
+                  <img src={Headset_3} alt="Configuración de grabación" className="w-96 lg:w-full h-auto rounded-lg shadow-md" />
                 </div>
               </div>
 
               {/* Tarjeta 3: Activar Escucha */}
-              <div className="group relative flex flex-col justify-between bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 ease-in-out overflow-hidden">
+              <div className="group relative flex flex-col items-center justify-between bg-white rounded-2xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 ease-in-out overflow-hidden">
                 {/* Encabezado con número y título */}
                 <div className="p-6 md:p-8 space-y-4">
                   <div className="relative z-10">
                     <h3 id="headset_11" className="text-2xl font-bold text-slate-800">
                       Activar Escucha
                     </h3>
-                    <p id="headset_12" className="text-slate-600 leading-relaxed mt-2">
+                    <p id="headset_12" className=" leading-relaxed mt-2">
                       Activa la opción "Escuchar este dispositivo" y aplica los cambios. Ahora deberías oír tu propia voz a través del headset.
                     </p>
                   </div>
                 </div>
                 {/* Imagen */}
                 <div className="px-8 pb-8">
-                  <img src={Headset_4} alt="Activar escucha" className="w-full h-auto rounded-lg shadow-md" />
+                  <img src={Headset_4} alt="Activar escucha" className="w-96 lg:w-full h-auto rounded-lg shadow-md" />
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <div className="container mx-auto px-20 pt-2 pb-10 mt-14 ">
-        <h2 id="headset_13" className="text-4xl py-10 font-semibold text-[#004466]">
+        <div className="container mx-auto px-10  pt-2 pb-10 mt-14 ">
+        <h2 id="headset_13" className="text-center md:text-left text-3xl md:text-4xl py-10 font-semibold text-[#004466]">
           No reconoce el <span className="text-white bg-[#004466] py-1 p-3 rounded-4xl">headset</span> USB
         </h2>
           {/* Sección Paso 1 */}

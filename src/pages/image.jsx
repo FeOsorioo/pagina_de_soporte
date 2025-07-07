@@ -17,6 +17,13 @@ import { useEffect, useRef, useState } from "react";
 const Image = () => {
   const location = useLocation();
   const swiperRef = useRef(null);
+  const [mostrarNavegacion, setMostrarNavegacion] = useState(true);
+
+  useEffect(() => {
+    if (window.innerWidth < 768) {
+      setMostrarNavegacion(false); // ocultar flechas en móviles
+    }
+  }, []);
   const [palabraClave, setPalabraClave] = useState("");
 
   const normalizar = (texto) =>
@@ -54,21 +61,20 @@ const Image = () => {
     <div className="text-[#004466] flex flex-col items-center pb-12 text-lg">
       <Header text1="Problemas de" text2="Imagen" color="066984" />
 
-      <div className="w-full overflow-x-hidden px-4 py-10 relative">
-        <Swiper
-          onSwiper={(swiper) => (swiperRef.current = swiper)}
-          spaceBetween={40}
-          slidesPerView={1}
-          pagination={{ clickable: true }}
-          navigation={true}
-          modules={[Pagination, Navigation]}
-          className="!max-w-full" // 👈 importante
-          style={{ overflow: "visible" }} // 👈 evita scroll oculto raro
-        >
+      <div className="w-full px-4 py-10 relative">
+            <Swiper
+              onSwiper={(swiper) => (swiperRef.current = swiper)}
+              spaceBetween={40}
+              slidesPerView={1}
+              pagination={{ clickable: true }}
+              navigation={mostrarNavegacion}
+              modules={[Pagination, Navigation]}
+              className="max-w-3xl"
+            >
                 {/* Slide 1 */}
                 <SwiperSlide className="w-full flex items-center justify-center pb-10">
                   <div className="flex flex-col items-center text-left">
-                      <h2 id="image_0" className="text-4xl font-bold mt-2 mb-4 text-[#004466]">
+                      <h2 id="image_0" className="text-center text-2xl lg:text-4xl font-bold mt-2 mb-4 text-[#004466]">
                         La imagen es <span className="text-white px-4 py-1 rounded-full bg-[#004466]">borrosa</span> o poco nítida
                       </h2>
                     <div className="bg-neutral-100 p-6 md:p-8 shadow-xl rounded-xl flex flex-col items-center text-center">

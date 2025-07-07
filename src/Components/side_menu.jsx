@@ -6,8 +6,6 @@ import { BsFillKeyboardFill, BsMouseFill } from "react-icons/bs";
 import { FaSignal } from "react-icons/fa";
 import { IoMenu, IoClose } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
-import SimpleBar from "simplebar-react";
-import "simplebar-react/dist/simplebar.min.css";
 import Search from "./search.jsx";
 import Logo from "../assets/General.png";
 
@@ -35,7 +33,7 @@ const Side_menu = () => {
       {/* Botón hamburguesa (solo en móvil) */}
       <button
         onClick={toggleMenu}
-        className="md:hidden fixed top-4 left-4 z-[9999] bg-white p-2 rounded-full shadow-lg"
+        className="lg:hidden fixed top-4 left-4 z-[9999] bg-white p-2 rounded-full shadow-lg"
       >
         {isOpen ? <IoClose size={24} /> : <IoMenu size={24} />}
       </button>
@@ -50,14 +48,14 @@ const Side_menu = () => {
       {/* Menú lateral */}
       <div
         className={`
-          fixed top-0 left-0 z-50 w-64 h-screen bg-white shadow-2xl
-          transform transition-transform duration-300 ease-in-out
+          fixed top-0 left-0 z-50 w-64 h-screen flex flex-col bg-white shadow-2xl
+          transform transition-transform duration-300 ease-in-out justify-between
           ${isOpen ? "translate-x-0" : "-translate-x-full"}
-          md:translate-x-0 md:block
+          lg:translate-x-0 lg:block
         `}
       >
-        <SimpleBar className="h-full p-6 flex flex-col justify-between font-sans text-sm text-gray-600">
-          <div>
+        <div className="flex flex-col justify-between h-full p-6 font-sans text-sm">
+          <div >
             <img
               src={Logo}
               alt="Logo"
@@ -133,12 +131,10 @@ const Side_menu = () => {
               />
             </nav>
           </div>
-
-          {/* Footer */}
-          <div className="text-xs text-gray-400 text-center">
+          <div className="text-xs text-center">
             © 2025 Contact Center Grupo
           </div>
-        </SimpleBar>
+        </div>
       </div>
     </>
   );
