@@ -10,7 +10,7 @@ const Keyboard = () => {
         <div className="text-[#004466] flex flex-col items-center pb-20 text-base lg:text-lg"> 
             <Header text1="Problemas" text2="Comunes" text3="Teclado" color="0367a5" />
 
-            <div className="container mx-auto px-8 md:px-0 lg:px-4 py-8"> 
+            <div className="mx-auto px-3 md:px-0 lg:px-4 py-8"> 
                 <div className='grid md:grid-cols-2 gap-10 lg:px-10'>
                     <div className="flex flex-col lg:flex-col items-center gap-10 mb-16 p-8 bg-white rounded-3xl shadow-xl border border-blue-100">
                         <div className="flex-1 flex flex-col gap-6 items-start">
