@@ -8,11 +8,11 @@ import Header from "../Components/header"
 
 const Monitor = () => {
   return (
-    <div className="text-[#004466] flex flex-col items-center text-lg">
+    <div className="text-[#004466] flex flex-col items-center text-base md:text-lg">
       
     <Header text1="Problemas" text2="Comunes" text3="con el Monitor" color="2eb8e8" />
 
-    <h1 id="monitor_0" className="text-4xl text-left font-medium">El monitor no enciende:</h1>
+    <h1 id="monitor_0" className="text-2xl md:text-4xl text-left font-medium">El monitor no enciende:</h1>
 
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-14 my-10">
       <div id="monitor_1" className="bg-neutral-200 flex flex-col p-6 items-center rounded-xl shadow-md">
